@@ -1,0 +1,815 @@
+#title_bar{
+    height:110px;
+    width:100%;
+    background-color: #FFDBE9;
+    background-size: cover;
+}
+/*#profile_bar{
+    margin-left: 90%;
+}*/
+#web_name{
+    color: rgb(81, 39, 121);
+    height:53px;
+    font-size: 40px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    align-content: center;
+    font-weight:lighter;
+    margin-left: 20px;
+    float:left;
+}
+#regis_link{
+    float:left;
+    height:40px;
+    width:100px;
+    margin-left:63%;
+    margin-top: 14px;
+    font-size:20px;
+    float:left;
+}
+#profile{
+    float: left;
+    height:40px;
+    width:40px;
+    border-radius: 50%;
+    margin-left:20px;
+    margin-top: 6px;
+    background-image: url("profile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    vertical-align:middle;
+}
+hr{
+    clear: both;
+}
+#search_bar{
+    width:92%;
+    height:40px;
+    margin-inline:2%;
+    border-radius: 10px;
+    padding: 15px;
+    transition: background-color 0.3s ease-in-out;
+    float:left;
+}
+#search_button{
+    float:left;
+    height:35px;
+    width:50px;
+    background-image: url("search_button.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: -10px;
+    margin-top:2px;
+    border-radius: 10px;
+}
+#search_button:hover{
+    box-shadow:0px 0px 7px 2px rgb(207, 87, 127) ;
+}
+#sale_animation{
+    height:90px;
+    width:100%;
+}
+#trolley_animation{
+    float:left;
+    height:90px;
+    width:110px;
+    background-color:white;
+    background-image: url("trolley__final.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    float: left;
+}
+#trolley_name{
+    height:90px;
+    width:700px;
+    animation-name: mymove;
+    animation-duration: 5s;
+    position: relative;
+}
+@keyframes mymove{
+    from{left:100%;}
+    to{left:0px;}
+}
+/*#blank_div{
+    float:left;
+    height: 90px;
+    width:400px;
+    background-color: aqua;
+    animation: blank 2s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    transition:width 1s;
+}
+#blank_div:hover{
+    width:0px;
+}*/
+#name_transition{
+    float: left;
+    font-size: large;
+    margin-left: 20px;
+    color: rgb(81, 39, 121);
+}
+#best_deals{
+    height:220px;
+    width:100%;
+    background-color: #fef3f7;
+}
+#breakfast{
+    height:150px;
+    width:150px;
+    border-radius: 10px;
+    background-image: url("breakast_tea.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px; 
+    float: left; 
+}
+#bread{
+    float: left;
+    height:150px;
+    width:150px;
+    border-radius: 10px;
+    background-image: url("milk and bread.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    margin-left: 18px;
+    float: left;
+}
+#snacks{
+    float: left;
+    height:150px;
+    width:150px;
+    border-radius: 10px;
+    background-image: url("snacks.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    margin-left: 18px;
+    float: left;
+}
+#kitchen{
+    float: left;
+    height:150px;
+    width:150px;
+    border-radius: 10px;
+    background-image: url("kitchen.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    margin-left: 18px;
+    float: left;
+}
+#juices{
+    float: left;
+    height:150px;
+    width:150px;
+    border-radius: 10px;
+    background-image: url("juices.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    margin-left: 18px;
+    float: left;
+}
+#fruits{
+    float: left;
+    height:150px;
+    width:150px;
+    border-radius: 10px;
+    background-image: url("fruits.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    margin-left: 18px;
+    float: left;
+}
+#sweets{
+    float: left;
+    height:150px;
+    width:150px;
+    border-radius: 10px;
+    background-image: url("sweets.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    margin-left: 18px;
+    float: left;
+}
+#beauty{
+    float: left;
+    height:150px;
+    width:150px;
+    border-radius: 10px;
+    background-image: url("beauty.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    margin-left: 18px;
+    float: left;
+}
+#electronic{
+    float: left;
+    height:150px;
+    width:150px;
+    border-radius: 10px;
+    background-image: url("electronic.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    margin-left: 18px;
+    float:left;
+}
+#breakfast_tea{
+    clear:both;
+    width:150px;
+    height:50px;
+    font-size: large;
+    text-align: center;
+    margin-top: 10px;
+    float: left;
+}
+#dairy_bread,#snacks_instants,#home_kitchen,#cold_juices,#fruits_veggies,#sweet_corner,#beauty_care,#electronics_appliances{
+    float:left;
+    width:150px;
+    height:50px;
+    font-size: large;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 18px;
+    float: left;
+}
+#brands{
+    clear: both;
+    height:200px;
+    width:100%;
+}
+#ekam{
+    height:120px;
+    width:120px;
+    border-radius: 10px;
+    background-image: url("ekam.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    box-shadow:0px 0px 7px 2px #e6c353 ; 
+    float: left; 
+}
+#borosil{
+    float:left;
+    height:120px;
+    width:120px;
+    border-radius: 10px;
+    background-image: url("borosil.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    margin-left:30px;
+    box-shadow:0px 0px 7px 2px #e6c353 ; 
+    float: left; 
+}
+#ariel{
+    float:left;
+    height:120px;
+    width:120px;
+    border-radius: 10px;
+    background-image: url("ariel.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    margin-left:30px;
+    box-shadow:0px 0px 7px 2px #e6c353 ; 
+    float: left; 
+}
+#vim{
+    float:left;
+    height:120px;
+    width:120px;
+    border-radius: 10px;
+    background-image: url("vim.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    margin-left:30px;
+    box-shadow:0px 0px 7px 2px #e6c353 ; 
+    float: left; 
+}
+#kent{
+    float:left;
+    height:120px;
+    width:120px;
+    border-radius: 10px;
+    background-image: url("kent.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    margin-left:30px;
+    box-shadow:0px 0px 7px 2px #e6c353 ; 
+    float: left; 
+}
+#maybelline{
+    float:left;
+    height:120px;
+    width:120px;
+    border-radius: 10px;
+    background-image: url("maybelline.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    margin-left:30px;
+    box-shadow:0px 0px 7px 2px #e6c353 ; 
+    float: left;
+}
+#grocery_kitchen{
+    clear: both;
+    height:290px;
+    width:100%;
+}
+#fresh_veggies{
+    height:180px;
+    width:150px;
+    border-radius: 10px;
+    background-image: url("fresh\ veggies.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    float:left;
+}
+#fresh_fruits{
+    float: left;
+    height:180px;
+    width:150px;
+    border-radius: 10px;
+    background-image: url("fresh\ fruits.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    margin-left: 25px;
+    float:left;
+}
+#atta{
+    float: left;
+    height:180px;
+    width:150px;
+    border-radius: 10px;
+    background-image: url("atta.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    margin-left: 25px;
+    float:left;
+}
+#oil{
+    float: left;
+    height:180px;
+    width:150px;
+    border-radius: 10px;
+    background-image: url("oil.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    margin-left: 25px;
+    float:left;
+}
+#masala{
+    float: left;
+    height:180px;
+    width:150px;
+    border-radius: 10px;
+    background-image: url("masala.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    margin-left: 25px;
+    float:left;
+}
+#bakery{
+    float: left;
+    height:180px;
+    width:150px;
+    border-radius: 10px;
+    background-image: url("bakery_cake.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    margin-left: 25px;
+    float:left;
+}
+#biscuit{
+    float: left;
+    height:180px;
+    width:150px;
+    border-radius: 10px;
+    background-image: url("biscuit_cookie.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    margin-left: 25px;
+    float:left;
+}
+#dryfruits{
+    float: left;
+    height:180px;
+    width:150px;
+    border-radius: 10px;
+    background-image: url("dryfruits.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    margin-left: 25px;
+    float:left;
+}
+#fv{
+    clear:both;
+    width:150px;
+    height:50px;
+    font-size: large;
+    text-align: center;
+    margin-top: 10px;
+    float: left;
+}
+#ff,#at,#oil_ghee,#msl,#bkri,#bc,#df{
+    float:left;
+    width:150px;
+    height:50px;
+    font-size: large;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 25px;
+    float: left;
+}
+#snacks_drinks{
+    clear: both;
+    height:290px;
+    width:100%;
+}
+#drinks_juice{
+    height:180px;
+    width:150px;
+    border-radius: 10px;
+    background-image: url("colddrink.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    float:left;
+}
+#icecream{
+    float: left;
+    height:180px;
+    width:150px;
+    border-radius: 10px;
+    background-image: url("icecream.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    margin-left: 25px;
+    float:left;
+}
+#chips{
+    float: left;
+    height:180px;
+    width:150px;
+    border-radius: 10px;
+    background-image: url("chips.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    margin-left: 25px;
+    float:left;
+}
+#chocolates{
+    float: left;
+    height:180px;
+    width:150px;
+    border-radius: 10px;
+    background-image: url("chocolate.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    margin-left: 25px;
+    float:left;
+}
+#noodle{
+    float: left;
+    height:180px;
+    width:150px;
+    border-radius: 10px;
+    background-image: url("noodle.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    margin-left: 25px;
+    float:left;
+}
+#frozen_food{
+    float: left;
+    height:180px;
+    width:150px;
+    border-radius: 10px;
+    background-image: url("frozen_food.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    margin-left: 25px;
+    float:left;
+}
+#sauces{
+    float: left;
+    height:180px;
+    width:150px;
+    border-radius: 10px;
+    background-image: url("spread.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    margin-left: 25px;
+    float:left;
+}
+#coffee{
+    float: left;
+    height:180px;
+    width:150px;
+    border-radius: 10px;
+    background-image: url("coffee.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    margin-left: 25px;
+    float:left;
+}
+#dj{
+    clear:both;
+    width:150px;
+    height:50px;
+    font-size: large;
+    text-align: center;
+    margin-top: 10px;
+    float: left;
+}
+#ice,#cp,#choco,#noodl,#froz,#sos,#cofe{
+    float:left;
+    width:150px;
+    height:50px;
+    font-size: large;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 25px;
+    float: left;
+}
+
+#beauty_hygiene{
+    clear: both;
+    height:290px;
+    width:100%;
+}
+#bath{
+    height:180px;
+    width:150px;
+    border-radius: 10px;
+    background-image: url("bath.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    float:left;
+}
+#hair{
+    float: left;
+    height:180px;
+    width:150px;
+    border-radius: 10px;
+    background-image: url("hair.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    margin-left: 25px;
+    float:left;
+}
+#skin{
+    float: left;
+    height:180px;
+    width:150px;
+    border-radius: 10px;
+    background-image: url("skin.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    margin-left: 25px;
+    float:left;
+}
+#makeup{
+    float: left;
+    height:180px;
+    width:150px;
+    border-radius: 10px;
+    background-image: url("makeup.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    margin-left: 25px;
+    float:left;
+}
+#medicine{
+    float: left;
+    height:180px;
+    width:150px;
+    border-radius: 10px;
+    background-image: url("medicine.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    margin-left: 25px;
+    float:left;
+}
+#perfumes{
+    float: left;
+    height:180px;
+    width:150px;
+    border-radius: 10px;
+    background-image: url("perfume.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    margin-left: 25px;
+    float:left;
+}
+#detergent{
+    float: left;
+    height:180px;
+    width:150px;
+    border-radius: 10px;
+    background-image: url("detergent.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:10px;
+    margin-left: 25px;
+    float:left;
+}
+#bath_soap{
+    clear:both;
+    width:150px;
+    height:50px;
+    font-size: large;
+    text-align: center;
+    margin-top: 10px;
+    float: left;
+}
+#hair_care,#skin_care,#make_up,#med,#perf,#detergnt{
+    float:left;
+    width:150px;
+    height:50px;
+    font-size: large;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 25px;
+    float: left;
+}
+#summer{
+    height:180px;
+    width:150px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background-image: url("summer.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-top:10px;
+    float:left;
+}
+#gift{
+    height:180px;
+    width:150px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background-image: url("gift.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-top:10px;
+    margin-left:25px;
+    float:left;
+}
+#wedding{
+    height:180px;
+    width:150px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background-image: url("wedding.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-top:10px;
+    margin-left:25px;
+    float:left;
+}
+#local{
+    height:180px;
+    width:150px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background-image: url("local.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-top:10px;
+    margin-left:25px;
+    float:left;
+}
+#gift{
+    height:180px;
+    width:150px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background-image: url("gift.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-top:10px;
+    margin-left:25px;
+    float:left;
+}
+#shark_tank{
+    height:180px;
+    width:150px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background-image: url("shark_tank.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-top:10px;
+    margin-left:25px;
+    float:left;
+}
+#puja{
+    height:180px;
+    width:150px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background-image: url("puja.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-top:10px;
+    margin-left:25px;
+    float:left;
+}
+#gourmet{
+    height:180px;
+    width:150px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background-image: url("gourmet.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-top:10px;
+    margin-left:25px;
+    float:left;
+}
+#fitness{
+    height:180px;
+    width:150px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background-image: url("fittness.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-top:10px;
+    margin-left:25px;
+    float:left;
+}
+#sum{
+    clear:both;
+    width:150px;
+    height:50px;
+    font-size: large;
+    text-align: center;
+    margin-top: 0px;
+    float: left;
+}
+#gift_,#wed,#loc,#shark,#puja_,#gor,#fit{
+    float:left;
+    width:150px;
+    height:50px;
+    font-size: large;
+    text-align: center;
+    margin-top: 0px;
+    margin-left: 25px;
+    float: left;
+}
+
+
+#ending{
+    clear:both;
+    height:550px;
+    width:100%;
+    background-color: black;
+}
+#logo{
+    height:200px;
+    width:250px;
+    background-image: url("swiggy_logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 50px;
+}
+table{
+    color: rgb(214, 214, 214);
+    padding: 30px;
+    text-align: center;
+    width:100%;
+    font-size: larger;
+    margin-top: -80px;
+}

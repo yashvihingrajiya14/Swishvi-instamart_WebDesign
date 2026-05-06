@@ -1,0 +1,27 @@
+body{
+    width:99%;
+}
+table{
+    font-size: 30px;
+    width:100%;
+    border-color: gray;
+}
+td{
+    width:50%;
+}
+hr{
+    color: gray;
+}
+button{
+    height:40px;
+    width:100%;
+    font-weight:bold;
+    border-color: grey;
+    border-radius: 10px;
+    color:rgb(57, 136, 57);
+    background-color: white;
+    box-shadow: 0px 0px 5px grey; 
+}
+del{
+    color: gray;
+}
