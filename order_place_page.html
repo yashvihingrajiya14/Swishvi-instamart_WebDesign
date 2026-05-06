@@ -1,0 +1,144 @@
+<html>
+    <head>
+        <title>Place Order</title>
+        <link rel="stylesheet" type="text/css" href="items_table.css">
+        <style>
+            .cart-item {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+            }
+            .item-controls {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+            .item-controls button {
+                padding: 3px 6px;
+                font-size: 12px;
+                cursor: pointer;
+            }
+            .quantity {
+                font-weight: bold;
+                margin: 0 5px;
+            }
+            .remove-btn {
+                background-color: red;
+                color: white;
+                border: none;
+                padding: 3px 6px;
+                cursor: pointer;
+            }
+            .add-more {
+                display: block;
+                margin: 20px auto;
+                text-align: center;
+                padding: 10px;
+                background-color: green;
+                color: white;
+                border: none;
+                cursor: pointer;
+                font-size: 16px;
+            }
+            .order-summary {
+                margin-top: 20px;
+                font-size: 18px;
+                text-align: center;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="myorder" style="width: 50%; margin-left: 25%;">
+            <h2>Your Order</h2>
+            <div id="cart-items"></div>
+        </div>
+
+        <button class="add-more" onclick="window.open('HTML.html','_self')">➕ Add More Items</button>
+
+        <div class="order-summary" id="order-summary"></div>
+
+        <div id="orderbutton" style="width: 50%; margin-left: 25%;">
+            <button onclick="ClickToOrder()">Order</button>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                let cartContainer = document.getElementById("cart-items");
+                let orderSummary = document.getElementById("order-summary");
+
+                if (cart.length === 0) {
+                    cartContainer.innerHTML = "<p>Your cart is empty.</p>";
+                    orderSummary.innerHTML = "";
+                    return;
+                }
+
+                let totalItems = 0;
+                let totalPrice = 0;
+
+                cartContainer.innerHTML = "";
+
+                cart.forEach(item => {
+                    let itemElement = document.createElement("div");
+                    itemElement.classList.add("cart-item");
+
+                    let itemPrice = extractPrice(item.content); // Extract price from item content
+                    let itemTotalPrice = item.quantity * itemPrice;
+                    totalItems += item.quantity;
+                    totalPrice += itemTotalPrice;
+
+                    itemElement.innerHTML = `
+                        <span>${item.content}</span>
+                        <div class="item-controls">
+                            <button onclick="updateQuantity('${item.id}', -1)">➖</button>
+                            <span class="quantity" id="qty-${item.id}">${item.quantity}</span>
+                            <button onclick="updateQuantity('${item.id}', 1)">➕</button>
+                            <button class="remove-btn" onclick="removeItem('${item.id}')">❌</button>
+                        </div>
+                    `;
+                    cartContainer.appendChild(itemElement);
+                });
+
+                orderSummary.innerHTML = `
+                    <p>Total Items: ${totalItems}</p>
+                    <p>Total Price: ${totalPrice} Rs</p>
+                `;
+            });
+
+            function updateQuantity(itemId, change) {
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                let itemIndex = cart.findIndex(i => i.id === itemId);
+
+                if (itemIndex !== -1) {
+                    cart[itemIndex].quantity += change;
+                    if (cart[itemIndex].quantity < 1) {
+                        cart[itemIndex].quantity = 1;
+                    }
+                    localStorage.setItem("cart", JSON.stringify(cart));
+                    document.getElementById(`qty-${itemId}`).textContent = cart[itemIndex].quantity;
+                    location.reload(); // Refresh order summary
+                }
+            }
+
+            function removeItem(itemId) {
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                cart = cart.filter(i => i.id !== itemId);
+                localStorage.setItem("cart", JSON.stringify(cart));
+                location.reload();
+            }
+
+            function ClickToOrder() {
+                localStorage.removeItem("cart");
+                window.open("order_form.html","_blank");
+            }
+
+            function extractPrice(content) {
+                let match = content.match(/(\d+)\s*Rs/);
+                return match ? parseInt(match[1]) : 0;
+            }
+        </script>
+    </body>
+</html>

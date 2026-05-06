@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>my profile</title>
+        <style>
+            body{
+                background-image: url("profile_background.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            #profile_div{
+                height: 500px;
+                width: 25%;
+                border: solid 5px;
+                background-color: lightblue;
+                align-items: center;
+                padding: 10px;
+                line-height: 30px;
+                font-size: large;
+                margin-left: 37.5%;
+                margin-top: 5%;
+                border-radius: 20px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <center><h1 style="color: aliceblue;">MY PROFILE</h1></center>
+        <div id="profile_div">
+            <b>Name:</b><p id="user_name"></p><hr>
+            <b>Email:</b><p id="user_email"></p><hr>
+            <b>Phone No.:</b><p id="user_phone"></p><hr>
+            <b>Password:</b><p id="user_password">-</p><hr>
+            <b>Confirm Password:</b><p id="user_CPassword">-</p>
+        </div>
+
+        <script>
+            window.onload = function () {
+                let userData = localStorage.getItem("registeredUser");
+        
+                if (!userData) { 
+                    alert("Please register first!");
+                    window.open("registration_page_swiggy.html","_self");
+                } else {
+                    let user = JSON.parse(userData);
+                    document.getElementById("user_name").innerHTML = user.name;
+                    document.getElementById("user_email").innerHTML = user.email;
+                    document.getElementById("user_phone").innerHTML = user.num;
+                }
+                localStorage.removeItem("registeredUser");
+            };
+        </script>
+        
+        
+    </body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("order_form_background.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background-color: bisque;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 450px;
+        }
+        h2 {
+            text-align: center;
+            color: #fc8019;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+            color: #333;
+        }
+        input {
+            width: 95%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .error {
+            color: red;
+            font-size: 12px;
+            display: none;
+        }
+        button {
+            width: 100%;
+            background-color: #fc8019;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #e56b00;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Enter Your Details</h2>
+        <form id="orderForm">
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" id="fullName" required>
+                <div class="error" id="nameError">Only alphabets allowed</div>
+            </div>
+            <div class="form-group">
+                <label>Mobile Number</label>
+                <input type="text" id="mobileNumber" required>
+                <div class="error" id="mobileError">Enter a valid 10-digit number</div>
+            </div>
+            <div class="form-group">
+                <label>Address Line 1</label>
+                <input type="text" id="address1" required>
+                <div class="error" id="address1Error">Max 50 characters allowed</div>
+            </div>
+            <div class="form-group">
+                <label>Address Line 2</label>
+                <input type="text" id="address2">
+                <div class="error" id="address2Error">Max 50 characters allowed</div>
+            </div>
+            <div class="form-group">
+                <label>Pincode</label>
+                <input type="text" id="pincode" required>
+                <div class="error" id="pincodeError">Enter a valid pincode</div>
+            </div>
+            <div class="form-group">
+                <label>City</label>
+                <input type="text" id="city" required>
+            </div>
+            <div class="form-group">
+                <label>State</label>
+                <input type="text" id="state" required>
+            </div>
+            <div class="form-group">
+                <label>Country</label>
+                <input type="text" id="country" required>
+            </div>
+            <button type="submit">Place Order</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("orderForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let isValid = true;
+
+            // Full Name Validation (Only Alphabets)
+            let fullName = document.getElementById("fullName").value.trim();
+            let nameError = document.getElementById("nameError");
+            if (!/^[a-zA-Z\s]+$/.test(fullName) || fullName === "") {
+                nameError.style.display = "block";
+                isValid = false;
+            } else {
+                nameError.style.display = "none";
+            }
+
+            // Mobile Number Validation (10 Digits)
+            let mobileNumber = document.getElementById("mobileNumber").value.trim();
+            let mobileError = document.getElementById("mobileError");
+            if (!/^\d{10}$/.test(mobileNumber)) {
+                mobileError.style.display = "block";
+                isValid = false;
+            } else {
+                mobileError.style.display = "none";
+            }
+
+            // Address Line 1 Validation (Max 50 Characters)
+            let address1 = document.getElementById("address1").value.trim();
+            let address1Error = document.getElementById("address1Error");
+            if (address1.length > 50 || address1 === "") {
+                address1Error.style.display = "block";
+                isValid = false;
+            } else {
+                address1Error.style.display = "none";
+            }
+
+            // Address Line 2 Validation (Max 50 Characters)
+            let address2 = document.getElementById("address2").value.trim();
+            let address2Error = document.getElementById("address2Error");
+            if (address2.length > 50) {
+                address2Error.style.display = "block";
+                isValid = false;
+            } else {
+                address2Error.style.display = "none";
+            }
+
+            // Pincode Validation (Worldwide)
+            let pincode = document.getElementById("pincode").value.trim();
+            let pincodeError = document.getElementById("pincodeError");
+            if (!/^\d{4,10}$/.test(pincode)) {
+                pincodeError.style.display = "block";
+                isValid = false;
+            } else {
+                pincodeError.style.display = "none";
+            }
+
+            if (isValid) {
+                alert("Order placed successfully!");
+                window.location.href = "HTML.html";
+            }
+        localStorage.removeItem("registeredUser");
+        });
+    </script>
+</body>
+</html>

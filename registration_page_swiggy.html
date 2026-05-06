@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <title>Registration Page</title>
+        <style>
+            h1{
+                color:rgb(249, 85, 26);
+                height:60px;
+                font-size: 45px;
+                font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                align-content: center;
+                font-weight:lighter;
+            }
+            body{
+                background-image: url("registration_back_swiggy.jpg");
+                background-repeat: no-repeat;
+                background-size: 100%;
+            }
+            fieldset{
+                background-color: rgb(243, 149, 67);
+                color:aliceblue;
+                height: 610px;
+                width:28%;
+                padding: 20px;
+                line-height: 35px;
+                border-radius: 25px;
+                margin-left: 10%;
+                margin-top:-20px;
+                
+            }
+            legend{
+                font-size: 30px;
+                text-align:center;
+                font-family:fantasy;
+                color:bisque;
+            }
+            input{
+                border-radius: 5px;
+                padding: 5px;
+                font-size: medium;
+                width: 70%;
+            }b{
+                font-size: large;
+            }
+            #submit,#reset{
+                width:120px;
+                background-color:bisque;
+                margin-left: 15%;
+                border-radius: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <center><h1>"SWISHVI INSTAMART-Groceries in a Swish!"</h1></center>
+        <form>
+            <fieldset>
+                <legend>R &bull; E &bull; G &bull; I &bull; S &bull; T &bull; E &bull; R</legend>
+                <center style="font-family:fantasy; font-size: large">Thanks for joining us! Please register by completing the information below.</center><br>
+                <b>Name</b><br>
+                <input type="text" name="Name" id="name"><br>
+                <b>Email Address</b><br>
+                <input type="email" name="Email" id="email"><br>
+                <b>Phone Number</b><br>
+                <input type="number" name="phone" id="phone_number"><br>
+                <b>Username</b><br>
+                <input type="text" name="username" id="user"><br>
+                <b>Password</b><br>
+                <input type="password" name="Password" id="password"><br>
+                <b>Conform Password</b><br>
+                <input type="password" name="cPassword" id="CPassword"><br><br>
+                <input type="submit" name="submit" id="submit" onclick="validateForm()">
+                <input type="reset" name="reset" id="reset" style="margin-left: 50px;">
+            </fieldset>
+        </form>
+
+        <script>
+                function validateForm() {
+                let name = document.getElementById("name").value.trim();
+                let email = document.getElementById("email").value.trim();
+                let num = document.getElementById("phone_number").value.trim();
+                let password = document.getElementById("password").value.trim();
+                let confirmPassword = document.getElementById("CPassword").value.trim();
+
+                if (name === "") {
+                    alert("Name is required.");
+                    return false;
+                }
+
+                let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                if (!email.match(emailPattern)) {
+                    alert("Invalid email format.");
+                    return false;
+                }
+
+                let numpattern = /^[6-9]\d{9}$/;
+                if(!num.match(numpattern)){
+                    alert("Invalid Phone Number format.")
+                    return false;
+                }
+
+                if (password.length < 8) {
+                    alert("Password must be at least 8 characters.");
+                    return false;
+                }
+
+                if (password !== confirmPassword) {
+                    alert("Passwords do not match.");
+                    return false;
+                }
+
+
+                
+                let userData = { name, email, num };
+                localStorage.setItem("registeredUser", JSON.stringify(userData));
+
+
+
+                alert("Registered Successfully");
+                window.open("HTML.html","_blank");
+
+                return true;
+            }
+        </script>
+    </body>
+</html>
